@@ -1,0 +1,157 @@
+@media (max-width: 1280px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .gallow {
+        width: 400px;
+        height: 400px;
+    }
+
+    .noose {
+        right: 160px;
+        width: 50px;
+        top: 65px;
+    }
+
+    .part {
+        width: 60px;
+        right: 160px;
+        top: 130px;
+    }
+
+    .playfield {
+        width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .gallow {
+        width: 300px;
+        height: 300px;
+    }
+
+    .noose {
+        right: 100px;
+        top: 38px;
+    }
+
+    .part {
+        width: 45px;
+        right: 105px;
+        top: 105px;
+    }
+
+    .playfield {
+        width: 300px;
+    }
+
+    .word-letter {
+        width: 30px;
+        height: 30px;
+    }
+
+    .keyboard {
+        width: auto;
+    }
+
+    .letter {
+        width: 30px;
+        height: 30px;
+    }
+
+    .portrait {
+        width: 50px;
+    }
+
+    .quote {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .game-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .playfield {
+        position: relative;
+        margin-top: 1.5em;
+        padding-left: 0;
+    }
+
+    .hint {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .attempts {
+        margin-top: 15px;
+    }
+
+    .show-keyboard {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 5px;
+    }
+
+    .show-keyboard-button {
+        width: 40px;
+        height: 25px;
+        border-radius: 5px;
+        background-color: #000;
+        background-image: url(../img/keyboard.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .keyboard {
+        display: none;
+    }
+
+    .keyboard.shown {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+    }
+
+    .keyboard .close {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+    }
+
+    .portrait {
+        width: 40px;
+    }
+}
+
+@media (max-width: 340px) {
+    .gallow {
+        height: 250px;
+    }
+
+    .noose {
+        width: 35px;
+    }
+
+    .part {
+        right: 98px;
+        top: 85px;
+    }
+}

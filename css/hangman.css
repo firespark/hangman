@@ -1,0 +1,251 @@
+.game-wrapper {
+    display: flex;
+    margin-top: 3em;
+    margin-bottom: 4em;
+    justify-content: center;
+}
+
+.gallow {
+    position: relative;
+    background-image: url('../img/tree.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 600px;
+    border-radius: 30px;
+}
+
+.noose {
+    width: 100px;
+    position: absolute;
+    right: 220px;
+    width: 60px;
+    top: 78px;
+}
+
+.part {
+    width: 100px;
+    right: 205px;
+    position: absolute;
+    top: 135px;
+}
+
+.rightarm {
+    z-index: 1;
+}
+
+.rightleg {
+    z-index: 2;
+}
+
+.leftleg {
+    z-index: 3;
+}
+
+.leftarm {
+    z-index: 4;
+}
+
+.torso {
+    z-index: 5;
+}
+
+.noose {
+    z-index: 6;
+}
+
+.head {
+    z-index: 7;
+}
+
+.playfield {
+    padding-left: 20px;
+}
+
+.word {
+    display: flex;
+    gap: 7px;
+}
+
+.word-letter {
+    border: 2px solid #b2adad;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 50px;
+}
+
+.word-letter.correct {
+    border: 2px solid #8000ff;
+    filter: drop-shadow(0 0 3px #8000ff);
+}
+
+.hint {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.attempts {
+    margin-top: 1.5em;
+    font-size: 18px;
+    text-align: center;
+}
+
+.attempts .used {
+    color: crimson;
+}
+
+.show-keyboard {
+    display: none;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    width: 420px;
+    margin: 40px auto 0;
+}
+
+.keyboard .close {
+    display: none;
+}
+
+.letter {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.letter:hover {
+    background-color: #351313;
+    filter: drop-shadow(0 0 3px crimson);
+}
+
+.letter.inactive {
+    cursor: auto;
+    background-color: #8b8787;
+    pointer-events: none;
+}
+
+.letter.inactive:hover {
+    filter: none;
+}
+
+.character-quote {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.portrait {
+    width: 70px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 2px solid #8000ff;
+    filter: drop-shadow(0 0 3px #8000ff);
+}
+
+.portrait img {
+    max-width: 100%;
+}
+
+.quote {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.notice-overlay {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.notice-overlay.dnone {
+    display: none;
+}
+
+.notice-overlay .notice-block {
+    width: 500px;
+    height: fit-content;
+    padding: 2rem;
+    text-align: center;
+    background: #e4e4e4;
+    border-radius: 10px;
+}
+
+.notice-overlay .notice-block.success {
+    color: #0e244f;
+    background: #d8e9f0;
+    filter: drop-shadow(0 0 26px #8000ff);
+}
+
+.notice-overlay .notice-block.fail {
+    color: #950404;
+    background: #e6ddde;
+    filter: drop-shadow(0 0px 26px rgb(236, 42, 91));
+}
+
+.notice-block .notice-img img {
+    width: 200px;
+}
+
+.notice-block .notice-text {
+    margin-top: 1rem;
+    font-size: 30px;
+}
+
+.notice-block .notice-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.notice-block .notice-button {
+    width: 150px;
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.notice-block .notice-button.play-again {
+    background-color: #73059b;
+    filter: drop-shadow(0 0 3px #8000ff);
+}
+
+.notice-block .notice-button.play-again:hover {
+    background-color: #4b055e;
+}
+
+.notice-block .notice-score {
+    margin-top: 10px;
+    font-size: 20px;
+}

@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+header {
+    background: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
+.logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo .logo-text {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.logo:hover .logo-text {
+    color: aqua;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-menu li.active,
+.nav-menu li:hover {
+    color: aqua;
+}
+
+.main-screen {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 139px);
+}
+
+footer {
+    background: #000000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 10px 0;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.footer-block {
+    width: 33.3333%;
+    text-align: center;
+}
+
+.footer-block:last-child {
+    display: flex;
+    justify-content: end;
+}
+
+a.footer-github {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.footer-github:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+a.footer-github img {
+    width: 50px;
+}
+
+a.footer-github span {
+    margin-left: 20px;
+}
+
+a.footer-rss img {
+    width: 100px;
+}
