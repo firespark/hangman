@@ -1,334 +1,274 @@
 const words = [
     {
-        word: "guitar",
-        hint: "A musical instrument with strings."
+        "word": "quixotic",
+        "hint": "Extremely idealistic, unrealistic, and impractical."
     },
     {
-        word: "oxygen",
-        hint: "A colorless, odorless gas essential for life."
+        "word": "ephemeral",
+        "hint": "Lasting for a very short time."
     },
     {
-        word: "mountain",
-        hint: "A large natural elevation of the Earth's surface."
+        "word": "serendipity",
+        "hint": "The occurrence of events by chance in a happy or beneficial way."
     },
     {
-        word: "painting",
-        hint: "An art form using colors on a surface to create images or expression."
+        "word": "limerence",
+        "hint": "The state of being infatuated or obsessed with another person."
     },
     {
-        word: "astronomy",
-        hint: "The scientific study of celestial objects and phenomena."
+        "word": "sonder",
+        "hint": "The realization that each passerby has a life as vivid and complex as your own."
     },
     {
-        word: "football",
-        hint: "A popular sport played with a spherical ball."
+        "word": "petrichor",
+        "hint": "The pleasant smell that frequently accompanies the first rain after a long period of warm, dry weather."
     },
     {
-        word: "chocolate",
-        hint: "A sweet treat made from cocoa beans."
+        "word": "defenestration",
+        "hint": "The act of throwing someone out of a window."
     },
     {
-        word: "butterfly",
-        hint: "An insect with colorful wings and a slender body."
+        "word": "vellichor",
+        "hint": "The strange wistfulness of used bookstores."
     },
     {
-        word: "history",
-        hint: "The study of past events and human civilization."
+        "word": "susurrus",
+        "hint": "Whispering or rustling sound."
     },
     {
-        word: "pizza",
-        hint: "A savory dish consisting of a round, flattened base with toppings."
+        "word": "eucatastrophe",
+        "hint": "A sudden and favorable resolution of events in a story; a happy ending."
     },
     {
-        word: "jazz",
-        hint: "A genre of music characterized by improvisation and syncopation."
+        "word": "palimpsest",
+        "hint": "A manuscript or piece of writing material on which later writing has been superimposed on effaced earlier writing."
     },
     {
-        word: "camera",
-        hint: "A device used to capture and record images or videos."
+        "word": "crepuscular",
+        "hint": "Relating to twilight."
     },
     {
-        word: "diamond",
-        hint: "A precious gemstone known for its brilliance and hardness."
+        "word": "melancholia",
+        "hint": "A deep, persistent sadness or depression."
     },
     {
-        word: "adventure",
-        hint: "An exciting or daring experience."
+        "word": "labyrinthine",
+        "hint": "Complicated, maze-like."
     },
     {
-        word: "science",
-        hint: "The systematic study of the structure and behavior of the physical and natural world."
+        "word": "callipygian",
+        "hint": "Having well-shaped buttocks."
     },
     {
-        word: "bicycle",
-        hint: "A human-powered vehicle with two wheels."
+        "word": "sesquipedalian",
+        "hint": "Given to using long words."
     },
     {
-        word: "sunset",
-        hint: "The daily disappearance of the sun below the horizon."
+        "word": "ataraxia",
+        "hint": "A state of serene calmness."
     },
     {
-        word: "coffee",
-        hint: "A popular caffeinated beverage made from roasted coffee beans."
+        "word": "nefarious",
+        "hint": "Wicked or criminal."
     },
     {
-        word: "dance",
-        hint: "A rhythmic movement of the body often performed to music."
+        "word": "anathema",
+        "hint": "Something or someone that one vehemently dislikes."
     },
     {
-        word: "galaxy",
-        hint: "A vast system of stars, gas, and dust held together by gravity."
+        "word": "laconic",
+        "hint": "Using very few words."
     },
     {
-        word: "orchestra",
-        hint: "A large ensemble of musicians playing various instruments."
+        "word": "somnambulist",
+        "hint": "A person who sleepwalks."
     },
     {
-        word: "volcano",
-        hint: "A mountain or hill with a vent through which lava, rock fragments, hot vapour, and gas are ejected."
+        "word": "phantasmagoria",
+        "hint": "A sequence of real or imaginary images like those seen in a dream."
     },
     {
-        word: "novel",
-        hint: "A long work of fiction, typically with a complex plot and characters."
+        "word": "ineluctable",
+        "hint": "Unable to be resisted or avoided; inescapable."
     },
     {
-        word: "sculpture",
-        hint: "A three-dimensional art form created by shaping or combining materials."
+        "word": "gossamer",
+        "hint": "Something light, delicate, or insubstantial."
     },
     {
-        word: "symphony",
-        hint: "A long musical composition for a full orchestra, typically in multiple movements."
+        "word": "obfuscate",
+        "hint": "To render obscure, unclear, or unintelligible."
     },
     {
-        word: "architecture",
-        hint: "The art and science of designing and constructing buildings."
+        "word": "perspicacious",
+        "hint": "Having keen mental perception and understanding."
     },
     {
-        word: "ballet",
-        hint: "A classical dance form characterized by precise and graceful movements."
+        "word": "threnody",
+        "hint": "A song of lamentation for the dead."
     },
     {
-        word: "astronaut",
-        hint: "A person trained to travel and work in space."
+        "word": "mellifluous",
+        "hint": "Sweet-sounding; pleasant to hear."
     },
     {
-        word: "waterfall",
-        hint: "A cascade of water falling from a height."
+        "word": "lugubrious",
+        "hint": "Looking or sounding sad and dismal."
     },
     {
-        word: "technology",
-        hint: "The application of scientific knowledge for practical purposes."
+        "word": "effulgent",
+        "hint": "Shining brightly; radiant."
     },
     {
-        word: "rainbow",
-        hint: "A meteorological phenomenon that is caused by reflection, refraction, and dispersion of light."
+        "word": "cacophony",
+        "hint": "Harsh discordant mixture of sounds."
     },
     {
-        word: "universe",
-        hint: "All existing matter, space, and time as a whole."
+        "word": "pugnacious",
+        "hint": "Eager to argue or fight."
     },
     {
-        word: "piano",
-        hint: "A musical instrument played by pressing keys that cause hammers to strike strings."
+        "word": "pulchritude",
+        "hint": "Physical beauty."
     },
     {
-        word: "vacation",
-        hint: "A period of time devoted to pleasure, rest, or relaxation."
+        "word": "pyrrhic",
+        "hint": "Achieved at excessive cost."
     },
     {
-        word: "rainforest",
-        hint: "A dense forest characterized by high rainfall and biodiversity."
+        "word": "apocryphal",
+        "hint": "Of doubtful authenticity."
     },
     {
-        word: "theatre",
-        hint: "A building or outdoor area in which plays, movies, or other performances are staged."
+        "word": "eldritch",
+        "hint": "Weird and sinister."
     },
     {
-        word: "telephone",
-        hint: "A device used to transmit sound over long distances."
+        "word": "recondite",
+        "hint": "Little known; abstruse."
     },
     {
-        word: "language",
-        hint: "A system of communication consisting of words, gestures, and syntax."
+        "word": "uxorious",
+        "hint": "Excessively fond of one's wife."
     },
     {
-        word: "desert",
-        hint: "A barren or arid land with little or no precipitation."
+        "word": "abstruse",
+        "hint": "Difficult to understand; obscure."
     },
     {
-        word: "sunflower",
-        hint: "A tall plant with a large yellow flower head."
+        "word": "brobdingnagian",
+        "hint": "Of gigantic size or scale."
     },
     {
-        word: "fantasy",
-        hint: "A genre of imaginative fiction involving magic and supernatural elements."
+        "word": "cynosure",
+        "hint": "A person or thing that is the center of attention or admiration."
     },
     {
-        word: "telescope",
-        hint: "An optical instrument used to view distant objects in space."
+        "word": "ebullient",
+        "hint": "Cheerful and full of energy."
     },
     {
-        word: "breeze",
-        hint: "A gentle wind."
+        "word": "fugacious",
+        "hint": "Tending to disappear; fleeting."
     },
     {
-        word: "oasis",
-        hint: "A fertile spot in a desert where water is found."
+        "word": "halcyon",
+        "hint": "Denoting a period of time in the past that was idyllically happy and peaceful."
     },
     {
-        word: "photography",
-        hint: "The art, process, or practice of creating images by recording light or other electromagnetic radiation."
+        "word": "impecunious",
+        "hint": "Having little or no money."
     },
     {
-        word: "safari",
-        hint: "An expedition or journey, typically to observe wildlife in their natural habitat."
+        "word": "jejune",
+        "hint": "Naive, simplistic, and superficial."
     },
     {
-        word: "planet",
-        hint: "A celestial body that orbits a star and does not produce light of its own."
+        "word": "kakistocracy",
+        "hint": "Government by the least qualified or most unprincipled citizens."
     },
     {
-        word: "river",
-        hint: "A large natural stream of water flowing in a channel to the sea, a lake, or another such stream."
+        "word": "lachrymose",
+        "hint": "Tearful or given to weeping."
     },
     {
-        word: "tropical",
-        hint: "Relating to or situated in the region between the Tropic of Cancer and the Tropic of Capricorn."
+        "word": "misanthrope",
+        "hint": "A person who dislikes humankind and avoids human society."
     },
     {
-        word: "mysterious",
-        hint: "Difficult or impossible to understand, explain, or identify."
+        "word": "nihilism",
+        "hint": "The rejection of all religious and moral principles, often in belief that life is meaningless."
     },
     {
-        word: "enigma",
-        hint: "Something that is mysterious, puzzling, or difficult to understand."
+        "word": "obsequious",
+        "hint": "Obedient or attentive to an excessive degree."
     },
     {
-        word: "paradox",
-        hint: "A statement or situation that contradicts itself or defies intuition."
+        "word": "penumbra",
+        "hint": "The partially shaded outer region of a shadow."
     },
     {
-        word: "puzzle",
-        hint: "A game, toy, or problem designed to test ingenuity or knowledge."
+        "word": "quagmire",
+        "hint": "A soft boggy area of land that gives way underfoot; also used metaphorically for complex situations."
     },
     {
-        word: "whisper",
-        hint: "To speak very softly or quietly, often in a secretive manner."
+        "word": "raconteur",
+        "hint": "A person skilled at telling stories."
     },
     {
-        word: "shadow",
-        hint: "A dark area or shape produced by an object blocking the light."
+        "word": "sagacious",
+        "hint": "Having keen mental discernment and good judgment."
     },
     {
-        word: "secret",
-        hint: "Something kept hidden or unknown to others."
+        "word": "torpid",
+        "hint": "Mentally or physically inactive; lethargic."
     },
     {
-        word: "curiosity",
-        hint: "A strong desire to know or learn something."
+        "word": "ululate",
+        "hint": "Howl or wail as an expression of strong emotion."
     },
     {
-        word: "unpredictable",
-        hint: "Not able to be foreseen or known beforehand; uncertain."
+        "word": "vexillology",
+        "hint": "The study of flags."
     },
     {
-        word: "obfuscate",
-        hint: "To confuse or bewilder someone; to make something unclear or difficult to understand."
+        "word": "widdershins",
+        "hint": "In a direction contrary to the sun's course; counterclockwise."
     },
     {
-        word: "unveil",
-        hint: "To make known or reveal something previously secret or unknown."
+        "word": "xenophobia",
+        "hint": "Dislike of or prejudice against people from other countries."
     },
     {
-        word: "illusion",
-        hint: "A false perception or belief; a deceptive appearance or impression."
+        "word": "yokel",
+        "hint": "An uneducated and unsophisticated person from the countryside."
     },
     {
-        word: "moonlight",
-        hint: "The light from the moon."
+        "word": "zephyr",
+        "hint": "A soft, gentle breeze."
     },
     {
-        word: "vibrant",
-        hint: "Full of energy, brightness, and life."
+        "word": "absquatulate",
+        "hint": "To leave abruptly."
     },
     {
-        word: "nostalgia",
-        hint: "A sentimental longing or wistful affection for the past."
+        "word": "bloviate",
+        "hint": "To speak in a pompous manner."
     },
     {
-        word: "brilliant",
-        hint: "Exceptionally clever, talented, or impressive."
+        "word": "catachresis",
+        "hint": "The use of a word in an incorrect or strained way."
     },
     {
-        word: "elephant",
-        hint: "A large mammal with a long trunk and tusks."
+        "word": "dystopia",
+        "hint": "An imagined state or society where there is great suffering or injustice."
     },
     {
-        word: "pizza",
-        hint: "A popular Italian dish with various toppings."
+        "word": "equivocate",
+        "hint": "Use ambiguous language so as to conceal the truth or avoid committing oneself."
     },
     {
-        word: "computer",
-        hint: "An electronic device used for processing information."
-    },
-    {
-        word: "sunflower",
-        hint: "A tall plant with large yellow flowers."
-    },
-    {
-        word: "butterfly",
-        hint: "An insect with colorful wings."
-    },
-    {
-        word: "oxygen",
-        hint: "A gas essential for sustaining life."
-    },
-    {
-        word: "mountain",
-        hint: "A large natural elevation of the earth's surface."
-    },
-    {
-        word: "chocolate",
-        hint: "A sweet food made from cacao beans."
-    },
-    {
-        word: "watermelon",
-        hint: "A juicy fruit with a green rind and red flesh."
-    },
-    {
-        word: "elephant",
-        hint: "A large mammal with a long trunk and tusks."
-    },
-    {
-        word: "beach",
-        hint: "A sandy or pebbly area by the ocean or lake."
-    },
-    {
-        word: "moon",
-        hint: "A natural satellite that orbits the Earth."
-    },
-    {
-        word: "hamburger",
-        hint: "A popular fast food sandwich."
-    },
-    {
-        word: "rainbow",
-        hint: "A meteorological phenomenon with multiple colors in the sky."
-    },
-    {
-        word: "coffee",
-        hint: "A popular caffeinated beverage."
-    },
-    {
-        word: "bicycle",
-        hint: "A two-wheeled vehicle powered by human pedaling."
-    },
-    {
-        word: "book",
-        hint: "A written or printed work consisting of pages."
-    },
-    {
-        word: "penguin",
-        hint: "A flightless bird found in the Southern Hemisphere."
+        "word": "farrago",
+        "hint": "A confused mixture."
     }
-];
+]

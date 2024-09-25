@@ -65,6 +65,7 @@
 
 .word {
     display: flex;
+    justify-content: center;
     gap: 7px;
 }
 
@@ -135,8 +136,14 @@
     filter: drop-shadow(0 0 3px crimson);
 }
 
-.letter.inactive {
-    background-color: #8b8787;
+.letter.correct {
+    background-color: #8000ff;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.letter.incorrect {
+    background-color: crimson;
     cursor: auto;
     pointer-events: none;
 }

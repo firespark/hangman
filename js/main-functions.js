@@ -82,17 +82,48 @@ function createPlayField() {
     const attempts = document.createElement('div');
     attempts.classList.add('attempts');
 
-    const keyboardBlock = document.createElement('div');
-    keyboardBlock.classList.add('keyboard-block');
+    const showKeyboard = document.createElement('div');
+    showKeyboard.classList.add('show-keyboard');
+
+    const showKeyboardButton = document.createElement('div');
+    showKeyboardButton.classList.add('show-keyboard');
+
+    showKeyboard.append(showKeyboardButton);
+
+    const keyboard = document.createElement('div');
+    keyboard.classList.add('keyboard');
+
+    const close = document.createElement('div');
+    close.classList.add('close');
+    close.innerText = 'x';
+
+    keyboard.append(close);
 
     const characterQuoteBlock = document.createElement('div');
     characterQuoteBlock.classList.add('character-quote-block');
 
     playfield.append(task);
     playfield.append(attempts);
-    playfield.append(keyboardBlock);
+    playfield.append(showKeyboard);
+    playfield.append(keyboard);
     playfield.append(characterQuoteBlock);
+
     gameWrapper.append(playfield);
+}
+
+function createKeyboard() {
+    const keyboard = document.querySelector('.keyboard');
+    const alphabet = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+
+    for (let i = 0; i < alphabet.length; i++) {
+        let letter = document.createElement('div');
+        letter.classList.add('letter');
+        letter.innerText = alphabet[i];
+        letter.addEventListener('click', function() {
+            clickLetter(this, this.innerText);
+        });
+        keyboard.append(letter);
+    }
 }
 
 function createFooter() {
@@ -152,4 +183,11 @@ function createFooter() {
     container.append(footerContainer);
     footer.append(container);
     body.append(footer);
+}
+
+function createNoticeOverlay() {
+    const noticeOverlay = document.createElement('div');
+    noticeOverlay.classList.add('notice-overlay', 'dnone');
+
+    body.append(noticeOverlay);
 }
