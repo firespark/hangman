@@ -1,3 +1,9 @@
 
+createHeader();
+createMain();
+createGallowField();
+createPlayField();
+createFooter();
 
-document.getElementById('year').textContent = new Date().getFullYear();
+
+createTask();
