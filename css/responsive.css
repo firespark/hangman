@@ -77,6 +77,10 @@
         margin-top: 1em;
     }
 
+    .gallow {
+        border-radius: 10px;
+    }
+
     .playfield {
         position: relative;
         margin-top: 1.5em;
@@ -119,13 +123,16 @@
         position: absolute;
         bottom: 0;
         padding: 20px;
+        display: flex;
         background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        z-index: 8;
     }
 
     .keyboard .close {
         position: absolute;
         right: 2px;
-        top: 2px;
+        top: 5px;
         display: flex;
         justify-content: center;
         align-content: center;

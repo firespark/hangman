@@ -1,21 +1,13 @@
+const alphabet = 'QWERTYUIOPASDFGHJKLZXCVBNM';
 const totalAttempts = 6;
-let secretWordObj = getRandomWord();
-let secretWord = secretWordObj.word.toUpperCase();
-
+let secretWordObj;
+let secretWord;
 let wrongAttempts = 0;
-let hangedParts = 0;
-
-console.log(secretWord);
 
 createHeader();
+createNav();
 createMain();
-createGallowField();
-createPlayField();
 createFooter();
-
-createTask();
-createAttempts();
-createKeyboard();
-
 createNoticeOverlay();
 
+pageIndex();

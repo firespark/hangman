@@ -1,3 +1,27 @@
+function startGame() {
+    const noticeOverlay = document.querySelector('.notice-overlay');
+    const characterQuoteBlock = document.querySelector('.character-quote-block');
+
+    body.classList.remove('ohidden');
+
+    secretWordObj = getRandomWord();
+    secretWord = secretWordObj.word.toUpperCase();
+
+    //console.log(secretWord);
+
+    wrongAttempts = 0;
+
+    noticeOverlay.classList.add('dnone')
+    noticeOverlay.innerHTML = '';
+
+    characterQuoteBlock.innerHTML = '';
+
+    createNoose();
+    createTask();
+    createAttempts();
+    createKeyboard();
+}
+
 function getRandomWord() {
     const randomKey = getRandomInt(0, words.length - 1);
     return words[randomKey];
@@ -8,9 +32,23 @@ function getRandomQuote() {
     return quotes[randomKey];
 }
 
+function createNoose() {
+    const gallow = document.querySelector('.gallow');
+
+    gallow.innerHTML = '';
+
+    const noose = document.createElement('img');
+    noose.src = 'img/noose.png';
+    noose.classList.add('noose');
+
+    gallow.append(noose);
+}
+
 function createTask() {
 
     const task = document.querySelector('.task');
+
+    task.innerHTML = '';
 
     const word = document.createElement('div');
     word.classList.add('word');
@@ -35,6 +73,33 @@ function createAttempts() {
     const attempts = document.querySelector('.attempts');
 
     attempts.innerHTML = `Wrong Attempts: <span class="used">${wrongAttempts}</span> / <span class="total">${totalAttempts}</span>`;
+}
+
+
+function createKeyboard() {
+    const keyboard = document.querySelector('.keyboard');
+
+    keyboard.innerHTML = '';
+
+    const close = document.createElement('div');
+    close.classList.add('close');
+    close.innerText = 'x';
+    close.addEventListener('click', function () {
+        hideMobileKeyboard();
+    });
+
+    keyboard.append(close);
+
+    for (let i = 0; i < alphabet.length; i++) {
+        let letter = document.createElement('div');
+        letter.classList.add('letter');
+        letter.innerText = alphabet[i];
+        letter.id = alphabet[i];
+        letter.addEventListener('click', function () {
+            clickLetter(this, alphabet[i]);
+        });
+        keyboard.append(letter);
+    }
 }
 
 function createQuote() {
@@ -148,13 +213,16 @@ function gameFinish(won = true) {
     const noticeOverlay = document.querySelector('.notice-overlay');
 
     noticeOverlay.innerHTML = '';
+    body.classList.add('ohidden');
 
     const noticeBlock = document.createElement('div');
     noticeBlock.classList.add('notice-block');
     if (won) {
+        playAudio('won');
         noticeBlock.classList.add('success');
     }
     else {
+        playAudio('fail');
         noticeBlock.classList.add('fail');
     }
 
@@ -172,10 +240,10 @@ function gameFinish(won = true) {
     const noticeText = document.createElement('div');
     noticeText.classList.add('notice-text');
     if (won) {
-        noticeText.innerText = 'Congratulations! You won!';
+        noticeText.innerText = options.won_text;
     }
     else {
-        noticeText.innerText = 'Lol You died!';
+        noticeText.innerText = options.fail_text;
     }
 
     const noticeScore = document.createElement('div');
@@ -194,6 +262,9 @@ function gameFinish(won = true) {
     const noticeButton = document.createElement('div');
     noticeButton.classList.add('notice-button', 'play-again');
     noticeButton.innerText = 'Play Again';
+    noticeButton.addEventListener('click', function () {
+        startGame();
+    });
 
     noticeButtons.append(noticeButton);
 
@@ -207,17 +278,38 @@ function gameFinish(won = true) {
 }
 
 function clickLetter(button, letter) {
-    if (findLetterInWord(letter)) {
-        button.classList.add('correct');
+
+    if (!button.classList.contains('correct') && !button.classList.contains('incorrect')) {
+        
+
+        hideMobileKeyboard();
+
+        if (findLetterInWord(letter)) {
+            playAudio('click');
+            button.classList.add('correct');
+        }
+        else {
+            playAudio('swoosh');
+            button.classList.add('incorrect');
+
+            changeAttempts();
+            hangBjorn();
+        }
+        createQuote();
+        checkGameFinish();
     }
-    else {
-        button.classList.add('incorrect');
+}
 
-        changeAttempts();
-        hangBjorn();
-
-
+function showMobileKeyboard() {
+    const keyboard = document.querySelector('.keyboard');
+    if (!keyboard.classList.contains('shown')) {
+        keyboard.classList.add('shown');
     }
-    createQuote();
-    checkGameFinish();
+}
+
+function hideMobileKeyboard() {
+    const keyboard = document.querySelector('.keyboard');
+    if (keyboard.classList.contains('shown')) {
+        keyboard.classList.remove('shown');
+    }
 }

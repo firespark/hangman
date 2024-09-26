@@ -9,7 +9,7 @@ function createHeader() {
 
     const headerContainer = document.createElement('div');
     headerContainer.classList.add('header-container');
-    
+
     const logo = document.createElement('div');
     logo.classList.add('logo');
 
@@ -21,8 +21,8 @@ function createHeader() {
 
     const logoText = document.createElement('div');
     logoText.classList.add('logo-text');
-    logoText.innerText = 'Hangman';
-    
+    logoText.innerText = options.title;
+
     logoA.append(logoImg);
     logoA.append(logoText);
     logo.append(logoA);
@@ -33,14 +33,44 @@ function createHeader() {
     body.append(header);
 }
 
+function createNav() {
+    const headerContainer = document.querySelector('.header-container');
+
+    const nav = document.createElement('nav');
+
+    const navMenu = document.createElement('ul');
+    navMenu.classList.add('nav-menu');
+
+    const li1 = document.createElement('li');
+    li1.classList.add('nav-link', 'home-link');
+    li1.innerText = options.link_text1;
+
+    const li2 = document.createElement('li');
+    li2.classList.add('nav-link', 'about-link');
+    li2.innerText = options.link_text2;
+
+    navMenu.append(li1);
+    navMenu.append(li2);
+    nav.append(navMenu);
+    headerContainer.append(nav);
+}
+
 function createMain() {
     const main = document.createElement('main');
+
+    body.append(main);
+}
+
+function createGameScreen() {
+    const main = document.querySelector('main');
+
+    main.innerHTML = '';
 
     const container = document.createElement('div');
     container.classList.add('container');
 
     const h1 = document.createElement('h1');
-    h1.innerText = 'Hangman Game';
+    h1.innerText = options.index_h1;
 
     const gameWrapper = document.createElement('div');
     gameWrapper.classList.add('game-wrapper');
@@ -48,8 +78,6 @@ function createMain() {
     container.append(h1);
     container.append(gameWrapper);
     main.append(container);
-
-    body.append(main);
 }
 
 function createGallowField() {
@@ -57,15 +85,10 @@ function createGallowField() {
 
     const gallowfield = document.createElement('div');
     gallowfield.classList.add('gallowfield');
-    
+
     const gallow = document.createElement('div');
     gallow.classList.add('gallow');
 
-    const noose = document.createElement('img');
-    noose.src = 'img/noose.png';
-    noose.classList.add('noose');
-
-    gallow.append(noose);
     gallowfield.append(gallow);
     gameWrapper.append(gallowfield);
 }
@@ -86,18 +109,15 @@ function createPlayField() {
     showKeyboard.classList.add('show-keyboard');
 
     const showKeyboardButton = document.createElement('div');
-    showKeyboardButton.classList.add('show-keyboard');
+    showKeyboardButton.classList.add('show-keyboard-button');
+    showKeyboardButton.addEventListener('click', function () {
+        showMobileKeyboard();
+    });
 
     showKeyboard.append(showKeyboardButton);
 
     const keyboard = document.createElement('div');
     keyboard.classList.add('keyboard');
-
-    const close = document.createElement('div');
-    close.classList.add('close');
-    close.innerText = 'x';
-
-    keyboard.append(close);
 
     const characterQuoteBlock = document.createElement('div');
     characterQuoteBlock.classList.add('character-quote-block');
@@ -109,21 +129,6 @@ function createPlayField() {
     playfield.append(characterQuoteBlock);
 
     gameWrapper.append(playfield);
-}
-
-function createKeyboard() {
-    const keyboard = document.querySelector('.keyboard');
-    const alphabet = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-
-    for (let i = 0; i < alphabet.length; i++) {
-        let letter = document.createElement('div');
-        letter.classList.add('letter');
-        letter.innerText = alphabet[i];
-        letter.addEventListener('click', function() {
-            clickLetter(this, this.innerText);
-        });
-        keyboard.append(letter);
-    }
 }
 
 function createFooter() {
@@ -190,4 +195,47 @@ function createNoticeOverlay() {
     noticeOverlay.classList.add('notice-overlay', 'dnone');
 
     body.append(noticeOverlay);
+}
+
+function createAboutScreen() {
+    const main = document.querySelector('main');
+
+    main.innerHTML = '';
+
+    const container = document.createElement('div');
+    container.classList.add('container');
+
+    const h1 = document.createElement('h1');
+    h1.innerText = options.about_h1;
+
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.innerHTML = options.about_text;
+
+    container.append(h1);
+    container.append(content);
+    main.append(container);
+}
+
+function addActiveLink(activeLink) {
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        link.classList.remove('active');
+        if (link.classList.contains(activeLink)) {
+            link.classList.add('active');
+        }
+    });
+}
+
+function pageIndex() {
+    addActiveLink('home-link');
+    createGameScreen();
+    createGallowField();
+    createPlayField();
+    startGame();
+}
+
+function pageAbout() {
+    addActiveLink('about-link');
+    createAboutScreen();
 }
