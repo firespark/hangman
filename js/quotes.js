@@ -1,68 +1,68 @@
 const quotes = [
     {
-        "type": "success",
+        "type": "fail",
         "text": "Bjorn's still breathing... but not for long!"
     },
     {
-        "type": "success",
+        "type": "fail",
         "text": "You missed! Maybe you should go back to raiding sheep."
     },
     {
-        "type": "success",
+        "type": "fail",
         "text": "That was almost as bad as Bjorn's haircut."
     },
     {
-        "type": "success",
+        "type": "fail",
         "text": "Even Bjorn could guess better than that!"
     },
     {
-        "type": "success",
+        "type": "fail",
         "text": "Careful now, or we'll run out of rope before we run out of letters!"
     },
     {
-        "type": "success",
+        "type": "fail",
         "text": "Close, but no axe to the skull this time."
     },
     {
-        "type": "success",
+        "type": "fail",
         "text": "Bjorn’s laughing at you... well, he would be if his jaw wasn’t already tied up."
     },
     {
-        "type": "success",
+        "type": "fail",
         "text": "Did you drink too much mead? That guess was worse than Bjorn’s battle plans."
     },
 
 
     {
-        "type": "fail",
+        "type": "success",
         "text": "Another piece of Bjorn dangles from the rope! Glue’s holding up nicely..."
     },
     {
-        "type": "fail",
+        "type": "success",
         "text": "There goes an arm! Hope you've got strong glue for the next one!"
     },
     {
-        "type": "fail",
+        "type": "success",
         "text": "One leg down, one left to stand on—oh wait..."
     },
     {
-        "type": "fail",
+        "type": "success",
         "text": "Look at that! He’s starting to look like a proper scarecrow!"
     },
     {
-        "type": "fail",
+        "type": "success",
         "text": "A hand added to the noose—don’t worry, we’ll stick it back later with some spit and glue."
     },
     {
-        "type": "fail",
+        "type": "success",
         "text": "Bjorn's losing more pieces than he ever had brains!"
     },
     {
-        "type": "fail",
+        "type": "success",
         "text": "That's another limb ready for hanging! At this rate, we’ll have him strung up like a puppet in no time!"
     },
     {
-        "type": "fail",
+        "type": "success",
         "text": "An arm here… A leg there… We’re practically building him from scratch!"
     },
 
