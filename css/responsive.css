@@ -9,17 +9,23 @@
         height: 400px;
     }
 
-    .noose {
+    .hangman-block {
         right: 160px;
-        top: 65px;
+        top: 63px;
+        width: 60px;
+    }
+
+    .noose {
+        right: auto;
         width: 50px;
+        left: 10px;
     }
 
     .part {
-        right: 160px;
-        top: 130px;
+        top: 60px;
         width: 60px;
     }
+
 
     .playfield {
         width: 400px;
@@ -32,14 +38,19 @@
         height: 300px;
     }
 
+    .hangman-block {
+        right: 110px;
+        top: 45px;
+        width: 45px;
+    }
+
     .noose {
-        right: 100px;
-        top: 38px;
+        left: 5px;
+        width: 40px;
     }
 
     .part {
-        right: 105px;
-        top: 105px;
+        top: 50px;
         width: 45px;
     }
 
@@ -158,7 +169,6 @@
     }
 
     .part {
-        right: 98px;
-        top: 85px;
+        top: 45px;
     }
 }

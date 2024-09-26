@@ -16,17 +16,38 @@
     border-radius: 30px;
 }
 
-.noose {
+@keyframes swing { 
+    0% { transform: rotate(-5deg);}
+    25% {transform: rotate(5deg);}
+    50% { transform: rotate(-5deg); } 
+    75% { transform: rotate(5deg); } 
+    100% { transform: rotate(-5deg); } 
+ }
+
+ .hangman-block {
     position: absolute;
     right: 220px;
-    top: 78px;
+    top: 95px;
+    width: 100px;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+    animation-iteration-count: infinite;
+}
+
+.noose {
+    position: absolute;
     width: 60px;
+    left: 20px;
+    right: auto;
+
 }
 
 .part {
     position: absolute;
-    right: 205px;
-    top: 135px;
+    top: 60px;
     width: 100px;
 }
 

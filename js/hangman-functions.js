@@ -49,14 +49,18 @@ function getRandomQuote(success = true) {
 
 function createNoose() {
     const gallow = document.querySelector('.gallow');
+    const hangmanWrapper = document.createElement('div');
+    hangmanWrapper.classList.add('hangman-block');
 
     gallow.innerHTML = '';
+    hangmanWrapper.innerHTML = '';
 
     const noose = document.createElement('img');
     noose.src = 'img/noose.png';
     noose.classList.add('noose');
 
-    gallow.append(noose);
+    hangmanWrapper.append(noose);
+    gallow.append(hangmanWrapper);
 }
 
 function createTask() {
@@ -168,7 +172,7 @@ function changeAttempts() {
 }
 
 function hangBjorn() {
-    const gallow = document.querySelector('.gallow');
+    const hangmanWrapper = document.querySelector('.hangman-block');
     const gallowImg = document.createElement('img');
     gallowImg.classList.add('part')
 
@@ -205,7 +209,7 @@ function hangBjorn() {
 
     }
 
-    gallow.append(gallowImg);
+    hangmanWrapper.append(gallowImg);
 }
 
 function checkGameFinish() {
