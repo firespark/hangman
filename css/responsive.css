@@ -62,7 +62,7 @@
     }
 
     .portrait {
-        width: 50px;
+        flex-basis: 50px;
     }
 
     .quote {
@@ -144,7 +144,7 @@
     }
 
     .portrait {
-        width: 40px;
+        flex-basis: 40px;
     }
 }
 

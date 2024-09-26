@@ -27,9 +27,24 @@ function getRandomWord() {
     return words[randomKey];
 }
 
-function getRandomQuote() {
-    const randomKey = getRandomInt(0, quotes.length - 1);
-    return quotes[randomKey];
+function getRandomQuote(success = true) {
+    const arr = [];
+
+    quotes.forEach(quote => {
+        if (success) {
+            if (quote.type === 'success' || quote.type === 'neutral') {
+                arr.push(quote.text);
+            }
+        }
+        else {
+            if (quote.type === 'fail' || quote.type === 'neutral') {
+                arr.push(quote.text);
+            }
+        }
+    });
+
+    const randomKey = getRandomInt(0, arr.length - 1);
+    return arr[randomKey];
 }
 
 function createNoose() {
@@ -102,7 +117,7 @@ function createKeyboard() {
     }
 }
 
-function createQuote() {
+function createQuote(success = true) {
     const characterQuoteBlock = document.querySelector('.character-quote-block');
 
     characterQuoteBlock.innerHTML = '';
@@ -120,7 +135,7 @@ function createQuote() {
 
     const quote = document.createElement('div');
     quote.classList.add('quote');
-    quote.innerText = getRandomQuote();
+    quote.innerText = getRandomQuote(success);
 
     characterQuote.append(portrait);
     characterQuote.append(quote);
@@ -287,6 +302,7 @@ function clickLetter(button, letter) {
         if (findLetterInWord(letter)) {
             playAudio('click');
             button.classList.add('correct');
+            createQuote();
         }
         else {
             playAudio('swoosh');
@@ -294,8 +310,9 @@ function clickLetter(button, letter) {
 
             changeAttempts();
             hangBjorn();
+            createQuote(false);
         }
-        createQuote();
+        
         checkGameFinish();
     }
 }
