@@ -167,24 +167,9 @@ function createFooter() {
 
     footerBlock2.append(dateSpan);
 
-    const footerBlock3 = document.createElement('div');
-    footerBlock3.classList.add('footer-block');
-
-    const aRss = document.createElement('a');
-    aRss.classList.add('footer-rss');
-    aRss.href = 'https://rs.school/';
-    aRss.target = '_blank';
-
-    const imgRss = document.createElement('img');
-    imgRss.src = 'img/rss.svg';
-
-    aRss.append(imgRss);
-
-    footerBlock3.append(aRss);
-
     footerContainer.append(footerBlock1);
     footerContainer.append(footerBlock2);
-    footerContainer.append(footerBlock3);
+
     container.append(footerContainer);
     footer.append(container);
     body.append(footer);
